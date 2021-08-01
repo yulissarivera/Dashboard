@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "41a44034-2e55-4aac-8be5-05390579fc4c",
+		"name": "SW202002_P2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Snippets",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Snippet 3",
+									"type": "text"
+								},
+								{
+									"key": "snippet",
+									"value": "Try some catch exception",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/snippets/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Any",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Orlando",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "Betancourth",
+									"type": "text"
+								},
+								{
+									"key": "edad",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "00000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/snippets/any",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"any"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/byid/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"byid",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60c9494826a4fa098ab250da"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Sales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/bysales/:sales",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"bysales",
+								":sales"
+							],
+							"variable": [
+								{
+									"key": "sales",
+									"value": "87"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Sales with Operator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/bysales/:operator/:sales",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"bysales",
+								":operator",
+								":sales"
+							],
+							"variable": [
+								{
+									"key": "operator",
+									"value": "lte"
+								},
+								{
+									"key": "sales",
+									"value": "36"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Sales Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/bysales/range/:lower/:upper/:incEndings",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"bysales",
+								"range",
+								":lower",
+								":upper",
+								":incEndings"
+							],
+							"variable": [
+								{
+									"key": "lower",
+									"value": "20"
+								},
+								{
+									"key": "upper",
+									"value": "30"
+								},
+								{
+									"key": "incEndings",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Keyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/bykeyword/:keyword",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"bykeyword",
+								":keyword"
+							],
+							"variable": [
+								{
+									"key": "keyword",
+									"value": "class"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Keyword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "keyword",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/snippets/addkeyword/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"addkeyword",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60ca9b1b7cbfe2dc8544ffe6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Comment User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/bycommentemail/:email",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"bycommentemail",
+								":email"
+							],
+							"variable": [
+								{
+									"key": "email",
+									"value": "alguncorreo@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Facet with Page and items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/snippets/facet/:page/:size",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"snippets",
+								"facet",
+								":page",
+								":size"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "10"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{JWT_T}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Security",
+			"item": [
+				{
+					"name": "Sigin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "obetancourthunicah@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "pswd",
+									"value": "Konoha%33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/security/signin",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"security",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "obetancourthunicah@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "pswd",
+									"value": "Konoha%33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/security/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"security",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:3000/"
+		},
+		{
+			"key": "JWT_T",
+			"value": ""
+		}
+	]
+}

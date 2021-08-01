@@ -1,0 +1,7 @@
+
+//Una Sola Variable
+const [email, setEmail] = useState();
+
+//Reducer se base en FLUX
+// Reducer multiples variables en un solo llamado
+-> Action -> Dispatch(Event) -> Reducer -> Modificar el Estado -> Irradia el cambio
